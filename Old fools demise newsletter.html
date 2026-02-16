@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC WIRELESS | BOUNTY DECK PATCHED</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Share+Tech+Mono&display=swap');
+
+        :root {
+            --neon-purple: #bc13fe;
+            --toxic-green: #39ff14;
+            --stark-white: #ffffff;
+            --void-black: #050505;
+            --alert-red: #ff003c;
+        }
+
+        /* RESET & BASE */
+        * { box-sizing: border-box; cursor: crosshair; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--void-black);
+            color: var(--stark-white);
+            font-family: 'Share Tech Mono', monospace;
+            margin: 0;
+            padding: 0;
+            border: 10px solid var(--neon-purple);
+        }
+
+        /* SCANLINE OVERLAY - Lower Z-Index for better compatibility */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
+            z-index: 10;
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--neon-purple);
+            color: black;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--toxic-green);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* GLITCH EFFECT */
+        .glitch {
+            position: relative;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-skew {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(3deg); }
+            40% { transform: skew(-1deg); }
+            60% { transform: skew(5deg); }
+            80% { transform: skew(-3deg); }
+            100% { transform: skew(0deg); }
+        }
+
+        /* NEWS CONTAINER */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            border-bottom: 10px solid var(--toxic-green);
+        }
+
+        article {
+            border: 1px solid var(--neon-purple);
+            padding: 30px;
+            background: #000;
+        }
+
+        article:hover {
+            background: var(--toxic-green);
+            color: black;
+        }
+
+        h2 { font-family: 'Orbitron', sans-serif; color: var(--toxic-green); }
+        article:hover h2 { color: black; }
+
+        /* BOUNTY BOARD - FORCED VISIBILITY */
+        .bounty-wrapper {
+            background: #111;
+            padding: 60px 20px;
+            border-top: 20px solid var(--toxic-green); /* Major visual anchor */
+            position: relative;
+            z-index: 5;
+        }
+
+        .bounty-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--alert-red);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px var(--alert-red);
+        }
+
+        .bounty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bounty-card {
+            border: 5px solid var(--alert-red);
+            padding: 20px;
+            background: black;
+            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bounty-card:hover {
+            transform: scale(1.05) rotate(1deg);
+            border-color: var(--stark-white);
+        }
+
+        .bounty-card::before {
+            content: "TARGET";
+            position: absolute;
+            font-size: 5rem;
+            color: rgba(255, 0, 60, 0.1);
+            top: 10px;
+            left: -10px;
+            font-weight: 900;
+        }
+
+        .bounty-name { 
+            color: var(--toxic-green); 
+            font-size: 1.8rem; 
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .reward { 
+            background: var(--alert-red); 
+            color: white; 
+            display: inline-block; 
+            padding: 5px 15px; 
+            font-size: 1.5rem; 
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: var(--toxic-green);
+            color: black;
+            text-align: center;
+            padding: 30px;
+            font-weight: bold;
+        }
+
+        .jump-link {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            color: var(--toxic-green);
+            text-decoration: none;
+            border: 2px solid var(--toxic-green);
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="glitch">NIGHT CITY WIRELESS</h1>
+    <p>CRIME. CHROME. CHAOS. ALWAYS LIVE.</p>
+</header>
+
+<a href="#bounty-deck" class="jump-link">>> ACCESS BOUNTY DECK [FORCE OVERRIDE]</a>
+
+<div class="container">
+    <article>
+        <h2>NETWATCH NODE COLLAPSE</h2>
+        <p>A data-fortress in Wellsprings just went dark. Locals report hearing "screams" coming from their cyberdecks. Don't jack in until the signal stabilizes, choombas!</p>
+    </article>
+    <article>
+        <h2>SYNTH-FOOD RIOTS</h2>
+        <p>The latest batch of "All-Natural Sludge" was found to contain 40% actual dirt. Residents are furious, but the stock price is up! Corporate efficiency at its finest.</p>
+    </article>
+    <article>
+        <h2>MAELSTROM TAKEOVER</h2>
+        <p>A local clinic was "reorganized" by the Maelstrom gang. Every patient left with four extra eyes and a direct link to a Russian death-metal server. 5 stars!</p>
+    </article>
+    <article>
+        <h2>K-E-R-E-N-Z-I-K-O-V RECALL</h2>
+        <p>Does the world feel like it's moving at 1% speed? You're not special, your implant is just leaking coolant into your brain. Consult a ripperdoc immediately.</p>
+    </article>
+</div>
+
+<div class="bounty-wrapper" id="bounty-deck">
+    <div class="bounty-title">NCPD MOST WANTED</div>
+    <div class="bounty-grid">
+        
+        <div class="bounty-card">
+            <span class="bounty-name">"GLITCH"</span>
+            <div class="reward">50,000eb</div>
+            <p>CRIME: Mass identity theft and hijacking corporate AVs for street races.</p>
+            <p style="font-size: 0.8rem; color: var(--alert-red);">STATUS: EXTREMELY DANGEROUS</p>
+        </div>
+
+        <div class="bounty-card">
+            <span class="bounty-name">"HAMMER"</span>
+            <div class="reward">12,000eb</div>
+            <p>CRIME: Smashing vending machines and assaulting trauma team drones.</p>
+            <p style="font-size: 0.8rem; color: var(--alert-red);">STATUS: APPROACH WITH CAUTION</p>
+        </div>
+
+        <div class="bounty-card">
+            <span class="bounty-name">"NEON"</span>
+            <div class="reward">85,000eb</div>
+            <p>CRIME: High-level corporate espionage. Stole Arasaka's private "Memories" server.</p>
+            <p style="font-size: 0.8rem; color: var(--alert-red);">STATUS: DEAD ONLY</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    &copy; 2077 // DATA BREACH DETECTED // GOODBYE
+</footer>
+
+</body>
+</html>
